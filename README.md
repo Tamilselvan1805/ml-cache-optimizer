@@ -1,5 +1,3 @@
-# ml-cache-optimizer
-
 # 🚀 ML Cache Optimizer
 
 An advanced system that compares traditional cache eviction strategies (LRU, LFU) with a Reinforcement Learning (RL)–based adaptive approach using real-world web traffic.
@@ -64,7 +62,7 @@ ml-cache-optimizer/
 ## 📊 Dataset
 
 * Apache HTTP Logs
-* Simulates real-world request patterns
+* Represents real-world request patterns
 * Exhibits strong **frequency locality**
 
 ---
@@ -109,38 +107,12 @@ ml-cache-optimizer/
 
 ## 🔍 Insights
 
-### 1. LFU Performs Best
-
-* Strong frequency skew in dataset
-* Frequently accessed items dominate
-
----
-
-### 2. RL Approximates Optimal Policy
-
-* Learns both frequency and recency
-* Achieves ~95% of LFU performance
-
----
-
-### 3. LRU is Limited
-
-* Captures only recency
-* Performs worst in frequency-heavy workloads
-
----
-
-### 4. Workload Stability
-
-* Performance stabilizes as workload increases
-* Indicates consistent request distribution
-
----
-
-### 5. Hybrid Approach Improves RL
-
-* Combining RL + LFU increases stability
-* Reduces poor eviction decisions
+* Performance increases with cache size for all algorithms
+* LFU consistently outperforms others due to strong frequency locality
+* RL closely approximates LFU and improves as cache size increases
+* Workload size has minimal impact due to stable request distribution
+* RL generalizes well across different workloads
+* Cache capacity is the dominant factor influencing hit ratio
 
 ---
 
@@ -175,20 +147,11 @@ python -m experiments.workload_test
 
 ---
 
-## 📈 Results
-
-### Cache Size vs Hit Ratio
-![Cache Size](plots/cache_size.png)
-
-### Workload vs Performance
-![Workload](plots/workload.png)     
-
----
 ## 🚀 Future Improvements
 
 * Deep RL using neural networks (DQN)
 * Latency-aware caching simulation
-* Distributed caching system
+* Distributed caching systems
 * Real-time adaptive cache tuning
 
 ---
@@ -207,7 +170,4 @@ python -m experiments.workload_test
 
 ## ⭐ If you like this project
 
-Give it a star and feel free to fork!
-
----
-
+## Give it a star ⭐ and feel free to fork!
